@@ -1,15 +1,15 @@
 $(document).ready(function () {
-  const amens = {};
+  const amenities = {};
   $('input:checkbox').click(function () {
     $(this).each(function () {
       if (this.checked) {
-        amens[$(this).data('id')] = $(this).data('name');
+        amenities[$(this).data('id')] = $(this).data('name');
       } else {
-        delete amens[$(this).data('id')];
+        delete amenities[$(this).data('id')];
       }
     });
-    if (Object.values(amens).length > 0) {
-      $('.amenities h4').text(Object.values(amens).join(', '));
+    if (Object.values(amenities).length > 0) {
+      $('.amenities h4').text(Object.values(amenities).join(', '));
     } else {
       $('.amenities h4').html('&nbsp');
     }
