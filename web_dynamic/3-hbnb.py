@@ -17,7 +17,7 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/0-hbnb')
+@app.route('/3-hbnb/')
 def hbnb_filters(the_id=None):
     """ HBNB is alive! """
     state_objs = storage.all('State').values()
@@ -30,7 +30,7 @@ def hbnb_filters(the_id=None):
     users = dict([user.id, "{} {}".format(user.first_name, user.last_name)]
                  for user in storage.all('User').values())
 
-    return render_template('0-hbnb.html',
+    return render_template('3-hbnb.html',
                            states=states,
                            amenities=amenities,
                            places=places,
