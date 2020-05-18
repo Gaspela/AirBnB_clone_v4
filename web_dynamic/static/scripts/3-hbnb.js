@@ -17,7 +17,7 @@ $(document).ready(function () {
 });
 
 $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
-  if (textStatus === 'OK') {
+  if (data.status === 'OK') {
     $('div#api_status').addClass('avaible');
   } else {
     $('div#api_status').removeClass('avaible');
