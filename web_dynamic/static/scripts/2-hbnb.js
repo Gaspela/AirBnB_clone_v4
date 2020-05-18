@@ -15,7 +15,8 @@ $(document).ready(function () {
     }
   });
 
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
+  /* http://127.0.0.1:5001/api/v1/status/ */
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
     if (data.status === 'OK') {
       $('div#api_status').addClass('avaible');
     } else {
